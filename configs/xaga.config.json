@@ -1,0 +1,46 @@
+[
+  {
+    "kernelSource": {
+      "name": "Redmi_Notre_11_TPro",
+      "repo": "https://android.googlesource.com/kernel/common",
+      "branch": "refs/tags/android12-5.10-2024-05_r7",
+      "device": "Redmi_xaga",
+      "defconfig": ""
+    },
+    "toolchains": [
+      {
+        "name": "clang",
+        "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
+        "branch": "master",
+        "binaryEnv": []
+      }
+    ],
+    "enableCcache": true,
+    "params": {
+      "externalCommands": {
+        "CROSS_COMPILE": "aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
+        "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-",
+        "CLANG_TRIPLE": "aarch64-linux-gnu-"
+      },
+      "LLVM": "1",
+      "LLVM_IAS": "1"
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true
+    },
+    "enableKernelSU": false,
+    "enableLXC": false,
+    "enableCcache": true,
+    "buildOptions": {
+      "KERNEL_DIR": "kernel-5.10",
+      "ABI_OUT_TAG": "xiaomi",
+      "KMI_SYMBOL_LIST": "android/abi_gki_aarch64_xiaomi",
+      "GKI_MODULES_LIST": "android/gki_aarch64_modules",
+      "ABI_DEFINITION": "android/abi_gki_aarch64.xml",
+      "SKIP_CP_KERNEL_HDR": "1",
+      "FILES": "vmlinux"
+    }
+  }
+]
